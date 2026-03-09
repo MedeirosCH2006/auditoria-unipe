@@ -24,4 +24,4 @@ A página faz uso das seguintes tags para organizar o conteúdo de forma lógica
 * `<footer>`: Contém os créditos, o ano e as informações institucionais do projeto.
 
 ## Evidência de Entrega
-O repositório inclui o ficheiro `index.html` e a imagem `print_html5.png`, que comprova a execução da página no navegador em conjunto com a data e hora do sistema (09/03/2026), conforme exigido nas regras da atividade.
+O repositório inclui o ficheiro `index.html` e a imagem, que comprova a execução da página no navegador em conjunto com a data e hora do sistema (09/03/2026), conforme exigido nas regras da atividade.
