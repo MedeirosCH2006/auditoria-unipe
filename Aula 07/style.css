@@ -161,3 +161,40 @@ footer {
     button { width: auto; padding: 1rem 3rem; display: block; margin: 0 auto; }
 }
 
+/* 7. DESAFIO EXTRA: Suporte ao Modo Escuro (prefers-color-scheme) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Sobrescrevendo os tokens para cores noturnas */
+        --bg-body: #121212;
+        --bg-card: #1e1e1e;
+        --text-main: #e0e0e0;
+        --primary-blue: #4da3ff; /* Azul mais claro para melhor contraste no escuro */
+    }
+
+    header, section {
+        background-color: var(--bg-card);
+        border-color: var(--primary-blue);
+    }
+
+    .info-tecnica {
+        background: #2d2d2d;
+        color: #ccc;
+        border-left-color: var(--primary-blue);
+    }
+
+    input {
+        background-color: #2d2d2d;
+        border-color: #444;
+        color: white;
+    }
+
+    /* Ajuste para o placeholder do input ficar legível no escuro */
+    input::placeholder {
+        color: #888;
+    }
+
+    footer {
+        background-color: #000;
+        color: #888;
+    }
+}
