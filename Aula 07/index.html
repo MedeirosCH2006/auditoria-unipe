@@ -4,202 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acervo Pica-Pau - Auditoria Técnica</title>
-    <style>
-        /* 1. VARIÁVEIS E TOKENS (Aula 07) */
-        :root {
-            --primary-blue: #0056b3;
-            --bg-light: #f9f9f9;
-            --text-dark: #222;
-            --gap-md: 1.5rem;
-            --fs-h1: clamp(1.6rem, 5vw, 2.5rem); /* Fonte Fluida */
-            --fs-h2: clamp(1.3rem, 4vw, 2rem);
-        }
-
-        /* 2. RESET E MOBILE-FIRST */
-        * { box-sizing: border-box; }
-        
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: var(--text-dark);
-            display: grid;
-            grid-template-areas: 
-                "header"
-                "main"
-                "footer";
-            grid-template-rows: auto 1fr auto;
-            min-height: 100vh;
-        }
-
-        header { 
-            grid-area: header;
-            padding: var(--gap-md);
-            border-bottom: 3px solid var(--primary-blue);
-            text-align: center;
-        }
-
-        h1 { font-size: var(--fs-h1); margin-bottom: 1rem; }
-
-        /* 3. FLEXBOX NO MENU (Responsivo) */
-        nav { 
-            display: flex;
-            flex-direction: column; /* Mobile: Empilhado */
-            gap: 10px;
-            background: #eee;
-            padding: 1rem;
-            border-radius: 8px;
-        }
-
-        nav a { 
-            text-decoration: none;
-            color: var(--primary-blue);
-            font-weight: bold;
-            padding: 12px;
-            border: 1px solid var(--primary-blue);
-            border-radius: 4px;
-            transition: 0.3s;
-            text-align: center;
-        }
-
-        nav a:hover { background: var(--primary-blue); color: white; }
-
-        /* 4. GRID NO CONTEÚDO PRINCIPAL */
-        main { 
-            grid-area: main;
-            padding: var(--gap-md);
-            display: grid;
-            gap: var(--gap-md);
-            max-width: 100%;
-        }
-
-        section { 
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        /* MÍDIA RESPONSIVA */
-        video { 
-            width: 100%; 
-            max-width: 800px; 
-            height: auto; 
-            border-radius: 4px;
-            display: block;
-            margin: 1rem auto;
-        }
-
-        .info-tecnica { 
-            font-size: 0.9rem;
-            background: #f0f0f0;
-            padding: 1rem;
-            border-left: 5px solid var(--primary-blue);
-        }
-
-        /* FORMULÁRIO RESPONSIVO */
-        form div { margin-bottom: 1rem; }
-        label { display: block; font-weight: bold; margin-bottom: 5px; }
-        input { 
-            width: 100%; 
-            padding: 12px; 
-            border: 1px solid #ccc; 
-            border-radius: 4px; 
-            font-size: 1rem;
-        }
-        button { 
-            background: var(--primary-blue);
-            color: white;
-            padding: 1rem;
-            border: none;
-            border-radius: 4px;
-            width: 100%;
-            font-size: 1.1rem;
-            cursor: pointer;
-        }
-
-        footer { 
-            grid-area: footer;
-            text-align: center;
-            padding: 2rem;
-            background: #333;
-            color: white;
-            font-size: 0.8rem;
-        }
-
-        /* 5. MEDIA QUERIES (Breakpoints da Aula 07) */
-
-        /* TABLET (>= 768px) */
-        @media (min-width: 768px) {
-            nav { flex-direction: row; justify-content: center; }
-            main { padding: 2rem 10%; }
-        }
-
-        /* DESKTOP (>= 1024px) */
-        @media (min-width: 1024px) {
-            main { 
-                grid-template-columns: 1fr 1fr; /* Layout em duas colunas */
-                padding: 3rem 15%;
-            }
-            #registro { grid-column: span 2; } /* Formulário ocupa a largura toda embaixo */
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <h1>Acervo Pica-Pau: Catálogo de Dublagens</h1>
-        <p>Engenharia de Interfaces</p>
-        <nav>
+        <p>Engenharia de Interfaces - UNIPÊ</p>
+        <nav class="nav-links">
             <a href="#estudios">Estúdios</a>
             <a href="#video">Conferência</a>
             <a href="#registro">Validar Lote</a>
         </nav>
     </header>
 
-    <main>
-        <section id="estudios">
+    <main class="main-content">
+        <section id="estudios" class="card-estudios">
             <h2>Identificação de Estúdios</h2>
-            <p>Mapeamento técnico de preservação de mídia.</p>
+            <p>Mapeamento técnico de preservação de mídia e catalogação de masters originais.</p>
             <div class="info-tecnica">
                 <strong>Lotes Catalogados:</strong> Dublasom Guanabara, AIC, BKS, Herbert Richers e Delart.
             </div>
         </section>
 
-        <section id="video">
+        <section id="video" class="card-video">
             <h2>Mídia de Auditoria</h2>
-            <video controls playsinline preload="metadata">
-                <source src="pica_pau_final.mp4" type="video/mp4">
-                <track kind="captions" src="legendas.vtt" srclang="pt" label="Português">
-            </video>
+            <div class="video-wrapper">
+                <video controls playsinline preload="metadata">
+                    <source src="pica_pau_final.mp4" type="video/mp4">
+                    <track kind="captions" src="legendas.vtt" srclang="pt" label="Português" default>
+                </video>
+            </div>
         </section>
 
-        <section id="registro">
+        <section id="registro" class="card-registro">
             <h2>Validação de Lote</h2>
             <form onsubmit="alert('Auditoria Validada!'); return false;">
-                <div>
-                    <label for="id-nome">Pesquisador:</label>
-                    <input type="text" id="id-nome" required>
+                <div class="form-group">
+                    <label for="id-nome">Pesquisador Responsável:</label>
+                    <input type="text" id="id-nome" placeholder="Nome completo" required>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="id-email">E-mail Institucional:</label>
-                    <input type="email" id="id-email" required>
+                    <input type="email" id="id-email" placeholder="usuario@ies.edu.br" required>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="id-lote">Estúdio Responsável:</label>
-                    <input type="text" id="id-lote" pattern="^(Dublasom Guanabara|AIC|BKS|Herbert Richers|Delart)$" required>
+                    <input type="text" id="id-lote" placeholder="Ex: AIC" pattern="^(Dublasom Guanabara|AIC|BKS|Herbert Richers|Delart)$" required>
                 </div>
                 <button type="submit">Autenticar Auditoria</button>
             </form>
         </section>
     </main>
 
-        <footer>
+    <footer>
         <p>Projeto desenvolvido para a disciplina de Engenharia de Interfaces</p>
-        <p>Integrantes: Rafael Medeiros de Melo e Gabriel de Oliveira Figueiredo</p> 
+        <p>Integrantes: Rafael Medeiros de Melo & Gabriel de Oliveira Figueiredo</p> 
         <p>&copy; 2026 UNIPÊ | João Pessoa, Paraíba</p>
-        </footer>
+    </footer>
 
 </body>
 </html>
