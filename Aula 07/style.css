@@ -1,0 +1,163 @@
+/* 1. VARIÁVEIS E TOKENS (Design System Base) */
+:root {
+    --primary-blue: #0056b3;
+    --bg-body: #f4f7f6;
+    --bg-card: #ffffff;
+    --text-main: #333;
+    
+    /* Espaçamento Relativo */
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+
+    /* Tipografia Fluida (Aula 07 - clamp) */
+    --fs-h1: clamp(1.5rem, 5vw, 2.2rem);
+    --fs-h2: clamp(1.2rem, 3vw, 1.8rem);
+    --fs-body: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+/* 2. RESET E MOBILE-FIRST */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 3. ESTRUTURA MACRO (Mobile: Coluna Única) */
+header {
+    background-color: white;
+    padding: var(--space-md);
+    border-bottom: 4px solid var(--primary-blue);
+    text-align: center;
+}
+
+h1 { font-size: var(--fs-h1); color: var(--primary-blue); margin-bottom: 0.5rem; }
+
+/* 4. FLEXBOX NA NAVEGAÇÃO */
+.nav-links {
+    display: flex;
+    flex-direction: column; /* Mobile stack */
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    padding: 0.8rem;
+    border: 1px solid var(--primary-blue);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+/* 5. GRID NO CONTEÚDO (Mobile-First: 1 Coluna) */
+.main-content {
+    padding: var(--space-md);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    flex: 1; /* Garante que o main cresça */
+}
+
+section {
+    background: var(--bg-card);
+    padding: var(--space-md);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* MÍDIAS RESPONSIVAS */
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.info-tecnica {
+    background: #e9ecef;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 4px solid var(--primary-blue);
+}
+
+/* FORMULÁRIO RESPONSIVO */
+.form-group { margin-bottom: 1.2rem; }
+label { display: block; margin-bottom: 0.4rem; font-weight: 600; }
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: var(--space-md);
+    font-size: 0.85rem;
+}
+
+/* 6. MEDIA QUERIES (Breakpoints Progressivos) */
+
+/* TABLET (>= 768px) */
+@media (min-width: 768px) {
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .main-content {
+        padding: var(--space-lg) 10%;
+    }
+}
+
+/* DESKTOP (>= 1024px) - Template Areas */
+@media (min-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr 1.5fr; /* Sidebar e Vídeo */
+        grid-template-areas: 
+            "info video"
+            "form form"; /* Registro ocupa a base */
+        padding: var(--space-lg) 15%;
+        gap: var(--space-lg);
+    }
+
+    .card-estudios { grid-area: info; }
+    .card-video { grid-area: video; }
+    .card-registro { grid-area: form; }
+
+    button { width: auto; padding: 1rem 3rem; display: block; margin: 0 auto; }
+}
+
