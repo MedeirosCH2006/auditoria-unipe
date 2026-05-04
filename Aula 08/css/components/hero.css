@@ -1,1 +1,19 @@
+#hero {
+    padding: var(--space-lg) var(--space-md);
+    text-align: center;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--color-border);
+}
 
+#hero h1 {
+    font-family: var(--font-title);
+    font-size: var(--fs-h1);
+    color: var(--primary-blue);
+    margin-bottom: var(--space-sm);
+}
+
+#hero p {
+    font-size: var(--fs-body);
+    color: var(--text-main);
+    opacity: 0.8;
+}
