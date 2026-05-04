@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta name="color-scheme" content="light dark">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo Pica-Pau - Auditoria Técnica</title>
+    
+    <!-- Importação Tipográfica Google Fonts (Passo 5) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Ordem ITCSS Exata exigida no Passo 3 -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components/nav.css">
+    <link rel="stylesheet" href="css/components/card.css">
+    <link rel="stylesheet" href="css/components/form.css">
+    <link rel="stylesheet" href="css/utilities.css">
+</head>
+<body>
+
+    <header>
+        <!-- Logo solto exigido pelo Passo 6 -->
+        <a href="/" class="logo">Acervo Pica-Pau</a>
+        
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#estudios">Estúdios</a></li>
+                <li><a href="#video">Conferência</a></li>
+                <li><a href="#registro">Validar Lote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Hierarquia H1 -> H2 -> H3 corrigida -->
+        <section id="hero">
+            <h1>Catálogo de Dublagens</h1>
+            <p>Aplicações para Internet - UNIPÊ</p>
+        </section>
+
+        <section id="estudios">
+            <h2>Identificação de Estúdios</h2>
+            <p>Mapeamento técnico de preservação de mídia e catalogação de masters originais.</p>
+            
+            <article class="card">
+                <h3>Lotes Catalogados</h3>
+                <p>Dublasom Guanabara, AIC, BKS, Herbert Richers e Delart.</p>
+            </article>
+        </section>
+
+        <section id="video">
+            <h2>Mídia de Auditoria</h2>
+            <article class="card">
+                <h3>Conferência do Episódio</h3>
+                <div class="video-wrapper">
+                    <video controls playsinline preload="metadata">
+                        <source src="pica_pau_final.mp4" type="video/mp4">
+                        <track kind="captions" src="legendas.vtt" srclang="pt" label="Português" default>
+                    </video>
+                </div>
+            </article>
+        </section>
+
+        <section id="registro">
+            <h2>Validação de Lote</h2>
+            <form onsubmit="alert('Auditoria Validada!'); return false;">
+                <div class="form-group">
+                    <label for="id-nome">Pesquisador Responsável:</label>
+                    <input type="text" id="id-nome" placeholder="Nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="id-email">E-mail Institucional:</label>
+                    <input type="email" id="id-email" placeholder="usuario@ies.edu.br" required>
+                </div>
+                <div class="form-group">
+                    <label for="id-lote">Estúdio Responsável:</label>
+                    <input type="text" id="id-lote" placeholder="Ex: AIC" pattern="^(Dublasom Guanabara|AIC|BKS|Herbert Richers|Delart)$" required>
+                </div>
+                <button type="submit">Autenticar Auditoria</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto desenvolvido para a disciplina de Aplicações para Internet</p>
+        <p>Integrantes: Rafael Medeiros de Melo & Gabriel de Oliveira Figueiredo</p> 
+        <p>&copy; 2025 UNIPÊ | João Pessoa, Paraíba</p>
+    </footer>
+
+</body>
+</html>
