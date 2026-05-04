@@ -1,0 +1,28 @@
+section {
+    background: var(--bg-card);
+    padding: var(--space-md);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.info-tecnica {
+    background: #e9ecef;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 4px solid var(--primary-blue);
+}
+
+/* Estilo para o Dark Mode do card técnico */
+@media (prefers-color-scheme: dark) {
+    .info-tecnica {
+        background: #2d2d2d;
+        color: #ccc;
+    }
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
