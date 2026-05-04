@@ -1,1 +1,21 @@
-
+:root {
+    --primary-blue: #0056b3;
+    --bg-body: #f4f7f6;
+    --bg-card: #ffffff;
+    --text-main: #333;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+    --fs-h1: clamp(1.5rem, 5vw, 2.2rem);
+    --fs-h2: clamp(1.2rem, 3vw, 1.8rem);
+    --fs-body: clamp(0.9rem, 2vw, 1.1rem);
+}
+/* Dark Mode integrado aqui */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-body: #121212;
+        --bg-card: #1e1e1e;
+        --text-main: #e0e0e0;
+        --primary-blue: #4da3ff;
+    }
+}
