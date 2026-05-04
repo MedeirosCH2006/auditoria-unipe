@@ -1,1 +1,18 @@
+footer {
+    padding: var(--space-md);
+    text-align: center;
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-lg);
+}
 
+footer p {
+    font-size: var(--fs-sm);
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+footer p:last-child {
+    font-weight: bold;
+    margin-top: 1rem;
+}
