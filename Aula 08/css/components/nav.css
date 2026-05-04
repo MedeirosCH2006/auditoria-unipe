@@ -1,0 +1,33 @@
+/* FLEXBOX NA NAVEGAÇÃO */
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Mobile stack */
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    padding: 0.8rem;
+    border: 1px solid var(--primary-blue);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.nav-links a:hover {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .nav-links ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
