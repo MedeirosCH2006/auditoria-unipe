@@ -17,9 +17,14 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components/nav.css">
+    <link rel="stylesheet" href="css/components/hero.css"> <!-- Adicionado -->
     <link rel="stylesheet" href="css/components/card.css">
     <link rel="stylesheet" href="css/components/form.css">
+    <link rel="stylesheet" href="css/components/footer.css"> <!-- Adicionado -->
     <link rel="stylesheet" href="css/utilities.css">
+    
+    <!-- Script Principal (Exigência do Passo 3) -->
+    <script src="js/main.js" defer></script>
 </head>
 <body>
 
@@ -40,7 +45,7 @@
         <!-- Hierarquia H1 -> H2 -> H3 corrigida -->
         <section id="hero">
             <h1>Catálogo de Dublagens</h1>
-            <p>Aplicações para Internet - UNIPÊ</p>
+            <p>Engenharia de Interface - UNIPÊ</p>
         </section>
 
         <section id="estudios">
@@ -59,8 +64,9 @@
                 <h3>Conferência do Episódio</h3>
                 <div class="video-wrapper">
                     <video controls playsinline preload="metadata">
-                        <source src="pica_pau_final.mp4" type="video/mp4">
-                        <track kind="captions" src="legendas.vtt" srclang="pt" label="Português" default>
+                        <!-- Caminhos corrigidos para a pasta assets -->
+                        <source src="assets/pica_pau_final.mp4" type="video/mp4">
+                        <track kind="captions" src="assets/legendas.vtt" srclang="pt" label="Português" default>
                     </video>
                 </div>
             </article>
@@ -87,9 +93,9 @@
     </main>
 
     <footer>
-        <p>Projeto desenvolvido para a disciplina de Aplicações para Internet</p>
+        <p>Projeto desenvolvido para a disciplina de Engenharia de Interface</p>
         <p>Integrantes: Rafael Medeiros de Melo & Gabriel de Oliveira Figueiredo</p> 
-        <p>&copy; 2025 UNIPÊ | João Pessoa, Paraíba</p>
+        <p>&copy; 2026 UNIPÊ | João Pessoa, Paraíba</p>
     </footer>
 
 </body>
