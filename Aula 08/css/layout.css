@@ -1,0 +1,49 @@
+/* ESTRUTURA MACRO (Mobile-First: Coluna Única) */
+header {
+    background-color: var(--bg-card);
+    padding: var(--space-md);
+    border-bottom: 4px solid var(--primary-blue);
+    text-align: center;
+}
+
+/* GRID NO CONTEÚDO (Mobile-First: 1 Coluna) */
+.main-content {
+    padding: var(--space-md);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    flex: 1; /* Garante que o main cresça para o footer ficar na base */
+}
+
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: var(--space-md);
+    font-size: 0.85rem;
+}
+
+/* MEDIA QUERIES (Breakpoints Progressivos) */
+
+/* TABLET (>= 768px) */
+@media (min-width: 768px) {
+    .main-content {
+        padding: var(--space-lg) 10%;
+    }
+}
+
+/* DESKTOP (>= 1024px) - Template Areas */
+@media (min-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr 1.5fr; /* Sidebar e Vídeo */
+        grid-template-areas: 
+            "info video"
+            "form form"; /* Registro ocupa a base */
+        padding: var(--space-lg) 15%;
+        gap: var(--space-lg);
+    }
+
+    .card-estudios { grid-area: info; }
+    .card-video { grid-area: video; }
+    .card-registro { grid-area: form; }
+}
