@@ -1,0 +1,47 @@
+:root {
+    /* Cores - Escala de Design Tokens */
+    --color-primary-500: #2E75B6; /* Cor exata do checkpoint */
+    --color-primary-600: #235A8C;
+    --color-success-500: #28a745;
+    
+    /* Neutros (Light Mode) */
+    --color-neutral-100: #f4f7f6;
+    --color-neutral-900: #111827;
+    --text-main: #374151;
+    --bg-body: var(--color-neutral-100);
+    --bg-card: #ffffff;
+    --color-border: #dddddd;
+
+    /* Tipografia */
+    --font-main: 'Inter', sans-serif;
+    --font-title: 'Poppins', sans-serif;
+    
+    /* Escala de Espaçamento (Passo 2.1) */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+    --space-xl: 4rem;
+
+    /* Design Tokens de Interface (Novos da Aula 09) */
+    --radius-md: 8px;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.15);
+    --transition-fast: 0.2s ease;
+
+    /* Font Sizes com Clamp */
+    --fs-h1: clamp(1.5rem, 5vw, 2.2rem);
+    --fs-h2: clamp(1.2rem, 3vw, 1.8rem);
+    --fs-h3: clamp(1.1rem, 2vw, 1.4rem);
+    --fs-body: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary-500: #4da3ff;
+        --text-main: #f9fafb;
+        --bg-body: #111827;
+        --bg-card: #1f2937;
+        --color-border: #374151;
+    }
+}
