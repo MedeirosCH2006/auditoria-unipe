@@ -1,0 +1,35 @@
+.form-group { margin-bottom: 1.2rem; }
+label { display: block; margin-bottom: 0.4rem; font-weight: 600; }
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+    input {
+        background-color: #2d2d2d;
+        border-color: #444;
+        color: white;
+    }
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    button { width: auto; padding: 1rem 3rem; display: block; margin: 0 auto; }
+}

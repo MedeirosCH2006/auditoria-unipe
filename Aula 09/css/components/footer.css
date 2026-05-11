@@ -1,0 +1,46 @@
+    .footer {
+    background-color: #111827; /* Cor escura obrigatória do PDF */
+    color: #9ca3af; /* Cinza claro para legibilidade */
+    padding: var(--space-xl) var(--space-md);
+    margin-top: var(--space-xl);
+    border-top: 1px solid #374151;
+}
+
+.footer__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: var(--space-lg);
+    /* Mobile-first: empilhado (1 coluna) */
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+/* Desktop: Grid de 3 colunas (Passo 6) */
+@media (min-width: 768px) {
+    .footer__content {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+    }
+}
+
+.footer__info p {
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+    margin-bottom: var(--space-xs);
+}
+
+.footer__copy {
+    grid-column: 1 / -1; /* Ocupa toda a largura embaixo das colunas */
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: var(--fs-sm);
+    text-align: center;
+}
+
+/* Estilo do ano automático via JS */
+#current-year {
+    color: var(--color-primary-500);
+    font-weight: bold;
+}

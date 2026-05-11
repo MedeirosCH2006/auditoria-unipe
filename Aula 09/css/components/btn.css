@@ -1,0 +1,19 @@
+   .btn--primary {
+    background-color: var(--color-primary-500);
+    color: white;
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background var(--transition-fast);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-primary-600);
+}
+
+.btn--primary:focus-visible {
+    outline: 3px solid var(--color-primary-500);
+    outline-offset: 2px;
+}
