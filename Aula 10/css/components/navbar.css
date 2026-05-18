@@ -2,8 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--space-6) 5%;
+    /* Reduzimos o padding vertical para o menor token (space-3 ou space-4) */
+    padding: var(--space-3) 5%; 
     background: var(--bg-card);
+    border-bottom: 2px solid var(--color-border); /* Usando o token de borda semântico */
     transition: all 0.4s ease-in-out; 
     position: fixed; 
     top: 0;
