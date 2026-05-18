@@ -1,1 +1,30 @@
+.form-group { margin-bottom: var(--space-4); } /* Removido o 1.2rem mágico */
+label { display: block; margin-bottom: var(--space-2); font-weight: 600; }
 
+input {
+    width: 100%;
+    padding: var(--space-4); /* Removido o 0.8rem mágico */
+    border: 1px solid var(--color-border); /* Removido o #ddd */
+    border-radius: var(--radius-md); /* Removido o 4px mágico */
+    background-color: var(--bg-card); /* Removido o white */
+    color: var(--text-main); /* Removido o #333 */
+}
+
+/* Removido o bloco de Dark Mode local cheio de hexadecimais  */
+
+button {
+    width: 100%;
+    padding: var(--space-4); /* Removido o 1rem mágico */
+    background-color: var(--color-action-primary); /* Corrigido o bug do --primary-blue */
+    color: var(--bg-body);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    /* Mapeando o 3rem mágico para a escala do sistema (space-10 = 2.5rem ou você pode criar um --space-12) */
+    button { width: auto; padding: var(--space-4) var(--space-10); display: block; margin: 0 auto; }
+}
