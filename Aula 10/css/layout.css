@@ -1,28 +1,24 @@
-/* ==========================================================================
-   LAYOUT - Estrutura de Grids e Containers (Passo 5)
-   ========================================================================== */
-
-/* Ajuste do Header (Agora seguindo a classe .header do Passo 3) */
-.header {
-    background-color: var(--bg-card);
-    padding: var(--space-md);
-    border-bottom: 4px solid var(--color-primary-500);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    transition: var(--transition-fast);
-}
-
 .main {
     max-width: 1200px;
     margin: 0 auto;
-    /* Aumentamos o primeiro valor (topo) para dar o recuo necessário */
-    padding: calc(var(--space-xl) + var(--space-lg)) var(--space-md) var(--space-lg) var(--space-md);
+    /* Ajustado para usar seus tokens numéricos reais */
+    padding: var(--space-16) var(--space-6);
 }
 
+/* Alinhamento Específico do Hero (Para empurrar o título de trás do menu) */
+.section.section--hero {
+    /* Cria o recuo exato somando os espaçamentos reais do seu projeto */
+    padding-top: calc(var(--space-16) + var(--space-10));
+    padding-bottom: var(--space-10);
+    text-align: center;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* O Grid de Cards (A alma da Aula 09) */
 .cards-grid {
     display: grid;
-    gap: var(--space-md);
+    gap: var(--space-6); /* Ajustado para token real */
     /* Mobile-first: 1 coluna */
     grid-template-columns: 1fr;
 }
@@ -43,21 +39,22 @@
 
 /* Seções Gerais */
 .section {
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-16); /* Ajustado para token real */
 }
 
+/* Título Padrão das Seções Secundárias */
 .section__title {
     font-family: var(--font-title);
     font-size: var(--fs-h2);
-    margin-bottom: var(--space-lg);
-    color: var(--color-primary-500);
+    margin-bottom: var(--space-6); /* Ajustado para token real */
+    color: var(--color-action-primary); /* Sincronizado com a cor semântica ativa */
 }
 
 /* Footer (Passo 6) */
 .footer {
-    background-color: var(--color-neutral-900); /* Cor escura exigida */
+    background-color: var(--_color-neutral-900); /* Cor escura real do seu token */
     color: #9ca3af;
     text-align: center;
-    padding: var(--space-xl) var(--space-md);
-    margin-top: var(--space-xl);
+    padding: var(--space-16) var(--space-6); /* Ajustado para tokens reais */
+    margin-top: var(--space-16); /* Ajustado para token real */
 }
