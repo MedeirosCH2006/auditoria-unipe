@@ -15,3 +15,12 @@
     --_color-border-light: #dddddd;
     --_color-border-dark: #374151;
 }
+
+/**
+ * SISTEMA DE DESIGN TOKENS - AULA 10
+ * Convenção de Nomenclatura Adotada:
+ * 1. Primitivos (--_color-*): Uso estritamente interno, identificados por underscore.
+ * 2. Semânticos (--color-*, --bg-*, --text-*): Contratos visuais consumidos pelos componentes.
+ * 3. Escala de Espaçamento (--space-*): Escala preditiva baseada em múltiplos de 4px (numérica).
+ * 4. Tipografia Fluid (--fs-*): Controle responsivo automatizado via propriedade clamp().
+ */
