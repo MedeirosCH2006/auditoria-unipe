@@ -1,0 +1,64 @@
+/* ==========================================================================
+   LAYOUT - Estrutura de Grids e Containers (Passo 5)
+   ========================================================================== */
+
+/* Ajuste do Header (Agora seguindo a classe .header do Passo 3) */
+.header {
+    background-color: var(--bg-card);
+    padding: var(--space-md);
+    border-bottom: 4px solid var(--color-primary-500);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: var(--transition-fast);
+}
+
+/* Container Principal */
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-md);
+}
+
+/* O Grid de Cards (A alma da Aula 09) */
+.cards-grid {
+    display: grid;
+    gap: var(--space-md);
+    /* Mobile-first: 1 coluna */
+    grid-template-columns: 1fr;
+}
+
+/* Tablet: 2 colunas (~768px) */
+@media (min-width: 768px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 3 colunas (~1200px) */
+@media (min-width: 1200px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Seções Gerais */
+.section {
+    margin-bottom: var(--space-xl);
+}
+
+.section__title {
+    font-family: var(--font-title);
+    font-size: var(--fs-h2);
+    margin-bottom: var(--space-lg);
+    color: var(--color-primary-500);
+}
+
+/* Footer (Passo 6) */
+.footer {
+    background-color: var(--color-neutral-900); /* Cor escura exigida */
+    color: #9ca3af;
+    text-align: center;
+    padding: var(--space-xl) var(--space-md);
+    margin-top: var(--space-xl);
+}
