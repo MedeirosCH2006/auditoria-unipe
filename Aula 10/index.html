@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta name="color-scheme" content="light dark">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo Pica-Pau - Auditoria Técnica</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="/" class="logo">Acervo Pica-Pau</a>
+        
+        <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            Menu <span id="hamburger"></span>
+        </button>
+    
+        <nav id="nav" class="navbar">
+            <ul id="menu" role="menu">
+                <li><a href="#estudios">Estúdios</a></li>
+                <li><a href="#video">Conferência</a></li>
+                <li><a href="#registro">Validar Lote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="section section--hero" id="home">
+            <h1 class="section__title">Auditoria Técnica de Dublagens</h1>
+            <p>Plataforma de catalogação e preservação de masters históricos: Pica-Pau e Acervos Clássicos.</p>
+        </section>
+
+        <section class="section" id="estudios">
+            <h2 class="section__title">Aplicações para Internet</h2> 
+            <div class="cards-grid">
+                
+                <article class="card card--featured">
+                    <h3 class="card__title">Lotes e Estúdios Catalogados</h3>
+                    <p class="card__text">Mapeamento técnico de preservação de mídia e catalogação de masters originais: Dublasom Guanabara, AIC, BKS, Herbert Richers e Delart.</p>
+                </article>
+
+                <article class="card" id="video"> 
+                    <h3 class="card__title">Mídia de Auditoria</h3>
+                    <div class="video-wrapper">
+                        <video controls playsinline preload="metadata">
+                            <source src="assets/pica_pau_final.mp4" type="video/mp4">
+                            <track kind="captions" src="assets/legendas.vtt" srclang="pt" label="Português" default>
+                        </video>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3 class="card__title">Preservação das dublagens</h3>
+                    <p class="card__text">Restauração de áudio e correção de pitch para masters internacionais.</p>
+                </article>
+
+                <article class="card">
+                    <h3 class="card__title">Master de dublagem</h3>
+                    <p class="card__text">Verificação de sincronia labial e análise de bitrate.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="registro">
+            <h2 class="section__title">Validação de Lote</h2>
+            <form onsubmit="alert('Auditoria Validada!'); return false;" class="form">
+                <div class="form-group">
+                    <label for="id-nome">Pesquisador Responsável:</label>
+                    <input type="text" id="id-nome" placeholder="Nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="id-email">E-mail Institucional:</label>
+                    <input type="email" id="id-email" placeholder="usuario@ies.edu.br" required>
+                </div>
+                <div class="form-group">
+                    <label for="id-lote">Estúdio Responsável:</label>
+                    <input type="text" id="id-lote" placeholder="Ex: AIC" pattern="^(Dublasom Guanabara|AIC|BKS|Herbert Richers|Delart)$" required>
+                </div>
+                <button type="submit" class="btn--primary">Autenticar Auditoria</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__info">
+                <p><strong>Projeto Acadêmico</strong></p>
+                <p>Engenharia de Interface</p>
+                <p>Aplicações para Internet</p>
+            </div>
+            <div class="footer__info">
+                <p><strong>Equipe</strong></p>
+                <p>Rafael Medeiros de Melo</p>
+                <p>Gabriel de Oliveira Figueiredo</p>
+            </div>
+            <div class="footer__info">
+                <p><strong>Instituição</strong></p>
+                <p>UNIPÊ | Paraíba</p>
+            </div>
+            
+            <div class="footer__copy">
+                <p>&copy; <span id="current-year"></span> Acervo Pica-Pau | Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
