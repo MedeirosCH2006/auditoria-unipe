@@ -1,1 +1,26 @@
+:root {
+    /* Contratos de Cores Base */
+    --color-action-primary: var(--_color-primary-500);
+    --color-action-primary-hover: var(--_color-primary-600);
+    --text-main: var(--_color-neutral-900);
+    --bg-body: var(--_color-neutral-100);
+    --bg-card: var(--_color-neutral-white);
+    --color-border: var(--_color-border-light);
 
+    /* Elementos de Interface */
+    --radius-md: 8px;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.15);
+    --transition-fast: 0.2s ease;
+}
+
+/* Chaveamento do Tema Escuro mapeando apenas os Semânticos */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-action-primary: var(--_color-primary-dark-500);
+        --text-main: var(--_color-neutral-100);
+        --bg-body: var(--_color-neutral-900);
+        --bg-card: var(--_color-neutral-800);
+        --color-border: var(--_color-border-dark);
+    }
+}
