@@ -13,14 +13,13 @@
     transition: var(--transition-fast);
 }
 
-/* Container Principal */
 .main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: var(--space-lg) var(--space-md);
+    /* Aumentamos o primeiro valor (topo) para dar o recuo necessário */
+    padding: calc(var(--space-xl) + var(--space-lg)) var(--space-md) var(--space-lg) var(--space-md);
 }
 
-/* O Grid de Cards (A alma da Aula 09) */
 .cards-grid {
     display: grid;
     gap: var(--space-md);
