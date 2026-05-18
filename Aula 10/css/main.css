@@ -1,0 +1,19 @@
+/* 1. Camada de Abstração (Design Tokens) */
+@import "./tokens/primitives.css";
+@import "./tokens/semantic.css";
+@import "./tokens/spacing.css";
+@import "./tokens/typography.css";
+
+/* 2. Camada Base e Configurações Globais */
+@import "./reset.css";
+@import "./base.css";
+@import "./layout.css";
+@import "./utilities.css";
+
+/* 3. Camada de Componentes (Consumidores dos Tokens) */
+@import "./components/btn.css";
+@import "./components/card.css";
+@import "./components/footer.css";
+@import "./components/form.css";
+@import "./components/hero.css";
+@import "./components/navbar.css";
