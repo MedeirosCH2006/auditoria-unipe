@@ -1,1 +1,19 @@
+.btn--primary {
+    background-color: var(--color-action-primary);
+    color: var(--bg-body); /* Removido o 'white' hardcoded */
+    padding: var(--space-4) var(--space-6);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background var(--transition-fast);
+}
 
+.btn--primary:hover {
+    background-color: var(--color-action-primary-hover);
+}
+
+.btn--primary:focus-visible {
+    outline: 3px solid var(--color-action-primary);
+    outline-offset: 2px;
+}
