@@ -1,1 +1,17 @@
-
+:root {
+    /* Cores Brutas (Uso Interno) */
+    --_color-primary-500: #2E75B6;
+    --_color-primary-600: #235A8C;
+    --_color-primary-dark-500: #4da3ff; /* Isolando o hexadecimal do Dark Mode */
+    --_color-success-500: #28a745;
+    
+    /* Neutros Brutos */
+    --_color-neutral-100: #f4f7f6;
+    --_color-neutral-800: #1f2937;
+    --_color-neutral-900: #111827;
+    --_color-neutral-white: #ffffff;
+    
+    /* Bordas Brutas */
+    --_color-border-light: #dddddd;
+    --_color-border-dark: #374151;
+}
