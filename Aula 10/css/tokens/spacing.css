@@ -1,1 +1,8 @@
-
+:root {
+    /* Escala preditiva baseada em múltiplos de 4px */
+    --space-2: 0.5rem;  /* Antigo xs (8px) */
+    --space-4: 1rem;    /* Antigo sm (16px) */
+    --space-6: 1.5rem;  /* Antigo md (24px) */
+    --space-10: 2.5rem; /* Antigo lg (40px) */
+    --space-16: 4rem;   /* Antigo xl (64px) */
+}
