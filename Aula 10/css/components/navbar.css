@@ -76,10 +76,28 @@
 }
 
 @media (max-width: 767px) {
-    #btn-mobile {
-        display: flex;
-        align-items: center;
-    }
+    /* Correção do Item 03 - Alinhamento e área de clique real */
+#btn-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;        /* Força a largura exata de usabilidade */
+    height: 44px;       /* Força a altura exata de usabilidade */
+    padding: 0;         /* Zera paddings que possam distorcer o bloco */
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--color-action-primary);
+}
+
+#hamburger {
+    border-top: 2px solid;
+    width: 20px;
+    display: block;
+    position: relative;
+    /* Removemos a margem esquerda fixa para deixar o flexbox do pai centralizar o ícone */
+    margin: 0; 
+}
 
     .navbar ul {
         display: none;
