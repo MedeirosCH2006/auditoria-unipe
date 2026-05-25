@@ -1,30 +1,53 @@
-   body {
-    font-family: var(--font-main);
-    background-color: var(--bg-body);
-    color: var(--text-main);
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    scroll-behavior: smooth; 
+/* ==========================================================================
+   Fase 2 - Declaração das Camadas de Cascata (Cascade Layers)
+   ========================================================================== */
+@layer base, components;
+
+@layer base {
+    body {
+        font-family: var(--font-main);
+        background-color: var(--bg-body);
+        color: var(--text-main);
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        scroll-behavior: smooth; 
+    }
+
+    main {
+        flex: 1;
+        padding-top: 100px;
+    }
+
+    h1, h2, h3 {
+        font-family: var(--font-title);
+        color: var(--color-primary-500);
+        margin-bottom: var(--space-sm);
+        font-weight: 700;
+    }
+
+    h1 { font-size: var(--fs-h1); }
+    h2 { font-size: var(--fs-h2); }
+    h3 { font-size: var(--fs-h3); }
+
+    p {
+        margin-bottom: var(--space-sm);
+    }
+
+    /* Ajuste para telas mobile (Fase 1 - Correção do Item 02/10) */
+    @media (max-width: 768px) {
+        main {
+            padding-top: 180px !important; /* Força o conteúdo a descer em telas menores */
+        }
+    }
 }
 
-main {
-    flex: 1;
-    padding-top: 100px;
-}
-
-h1, h2, h3 {
-    font-family: var(--font-title);
-    color: var(--color-primary-500);
-    margin-bottom: var(--space-sm);
-    font-weight: 700;
-}
-
-h1 { font-size: var(--fs-h1); }
-h2 { font-size: var(--fs-h2); }
-h3 { font-size: var(--fs-h3); }
-
-p {
-    margin-bottom: var(--space-sm);
+/* ==========================================================================
+   Fase 3 - Demanda do Cliente: Ajuste de escala para Projetor (Telas Largas)
+   ========================================================================== */
+@media (min-width: 1600px) {
+    html {
+        font-size: 120%; /* Amplia as fontes base em telas muito grandes */
+    }
 }
